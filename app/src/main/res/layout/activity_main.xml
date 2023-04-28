@@ -14,10 +14,49 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.309"
+        app:layout_constraintHorizontal_bias="0.095"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.13" />
+
+    <TextView
+        android:id="@+id/textView_sortowanie_nazwa_KMP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Knutha-Morrisa-Pratta"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.127"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.256" />
+
+    <TextView
+        android:id="@+id/textView_sortowanie_nazwa_BM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Boyera-Moore'a"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.311" />
+
+    <TextView
+        android:id="@+id/textView_sortowanie_nazwa_Bruteforce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bruteforce"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.192" />
 
     <EditText
         android:id="@+id/input_ile_elementow"
@@ -34,23 +73,10 @@
         app:layout_constraintVertical_bias="0.584" />
 
     <TextView
-        android:id="@+id/textView_sortowanie_nazwa_BM"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Boyera-Moore'a"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.327"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.311" />
-
-    <TextView
         android:id="@+id/textView_sortowanie_wynik_KMP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0s"
+        android:text="0ms"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -63,7 +89,7 @@
         android:id="@+id/textView_sortowanie_wynik_KarpRabin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0s"
+        android:text="0ms"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -102,7 +128,7 @@
         android:id="@+id/textView_sortowanie_wynik_BM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0s"
+        android:text="0ms"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -115,7 +141,7 @@
         android:id="@+id/textView_sortowanie_wynik_Bruteforce"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0s"
+        android:text="0ms"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -123,31 +149,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.192" />
-
-    <TextView
-        android:id="@+id/textView_sortowanie_nazwa_Bruteforce"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bruteforce"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.29"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.193" />
-
-    <TextView
-        android:id="@+id/textView_sortowanie_nazwa_KMP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Knutha-Morrisa-Pratta"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.404"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.256" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

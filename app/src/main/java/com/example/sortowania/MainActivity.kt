@@ -22,13 +22,54 @@ class MainActivity : AppCompatActivity() {
 
         var input_ile_razy = findViewById<EditText>(R.id.input_ile_razy)
         var input_ile_elementow = findViewById<EditText>(R.id.input_ile_elementow)
+
+        button_wykonaj.setOnClickListener {
+            if (input_ile_razy.text.isNotEmpty() && input_ile_elementow.text.isNotEmpty())
+            {
+                //stworzenie losowej listy
+                val losowa_lista = losuj(input_ile_elementow.text.toString().toInt())
+
+                //zmienne pomocnicze do obliczania czasu trwania sortoawian
+                var temp1 : Long; var temp2 : Long
+
+                //Pomiar 1 - sortowanie przez wstawianie
+                temp1 = System.currentTimeMillis()
+                for (i in 0..input_ile_razy.text.toString().toInt()) {
+                    sortowanie_Rabin_Karp(losowa_lista)
+
+                }
+                temp2 = System.currentTimeMillis()
+                wynik_rabin_karp.text = calcTime(temp1, temp2).toString() + " milisekund"
+
+                //Pomiar 2 - sortowanie babelkowe
+                temp1 = System.currentTimeMillis()
+                for (i in 0..input_ile_razy.text.toString().toInt())
+                    sortowanie_Bruteforce(losowa_lista)
+                temp2 = System.currentTimeMillis()
+                wynik_bruteforce.text = calcTime(temp1, temp2).toString() + " milisekund"
+
+                //Pomiar 3 - sortowanie szybkie
+                temp1 = System.currentTimeMillis()
+                for (i in 0..input_ile_razy.text.toString().toInt())
+                    sortowanie_KMP(losowa_lista)
+                temp2 = System.currentTimeMillis()
+                wynik_KMP.text = calcTime(temp1, temp2).toString() + " milisekund"
+
+                //Pomiar 4 - sortowanie przez kopcowanie
+                temp1 = System.currentTimeMillis()
+                for (i in 0..input_ile_razy.text.toString().toInt())
+                    sortowanie_BM(losowa_lista)
+                temp2 = System.currentTimeMillis()
+                wynik_BM.text = calcTime(temp1, temp2).toString() + " milisekund"
+            }
+        }
     }
 }
 
 //Funkcja losująca losową liste
-fun losuj(size: Int): MutableList<Int> {
+fun losuj(size: Int): IntArray {
     val random = Random()
-    return List(size) { random.nextInt(1000) }.toMutableList()
+    return List(size) { random.nextInt(1000) }.toIntArray()
 }
 
 //Funkcja licząca roznice miedzy pomiarami
@@ -83,7 +124,7 @@ fun sortowanie_Bruteforce(arr: IntArray): IntArray {
 }
 
 //===============================Sortowanie Knutha-Morrisa-Pratta==================================
-fun kmpSort(arr: IntArray) {
+fun sortowanie_KMP(arr: IntArray) {
     val n = arr.size
     val aux = IntArray(n)
     var lo = 0
