@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,5 +22,19 @@ class MainActivity : AppCompatActivity() {
 
         var input_ile_razy = findViewById<EditText>(R.id.input_ile_razy)
         var input_ile_elementow = findViewById<EditText>(R.id.input_ile_elementow)
+
+
     }
+}
+
+//Funkcja losująca losową liste
+fun losuj(size: Int): MutableList<Int> {
+    val random = Random()
+    return List(size) { random.nextInt(1000) }.toMutableList()
+}
+
+//Funkcja licząca roznice miedzy pomiarami
+fun calcTime(t1 : Long, t2 : Long) : Long
+{
+    return t2 - t1
 }
